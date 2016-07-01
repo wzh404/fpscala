@@ -5,7 +5,8 @@ package com.xeehoo.intelligence
  */
 object Intelligence {
   def main(args: Array[String]) = {
-    testPearson()
+//    testPearson()
+    testJaccard()
   }
 
   def testEuclid(): Unit ={
@@ -20,5 +21,16 @@ object Intelligence {
     val y = Map[String, Double]("lady"->2.5, "snakes"->3.5, "just"->3.0, "superman"->3.5, "dupree"->2.5, "night"->3.0)
     val e = new Pearson();
     println(e.distance(x, y));
+  }
+
+  def testJaccard() : Unit = {
+    val r = Array(0, 1, 2, 3, 4, 5) // ´Ê
+    val a = Array(
+      Array(1, 0, 0, 1, 0), // S1
+      Array(0, 0, 1, 0, 0), // S2
+      Array(0, 1, 0, 1, 1), // S3
+      Array(1, 0, 1, 1, 0)  // S4
+    )
+    (new Jaccard()).cal(r, a)
   }
 }
