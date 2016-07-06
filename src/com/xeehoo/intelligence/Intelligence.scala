@@ -24,7 +24,7 @@ object Intelligence {
   }
 
   def testJaccard() : Unit = {
-    val r = Array(0, 1, 2, 3, 4, 5) // ¥ 
+    val r = Array(0, 1, 2, 3, 4, 5) // ËØç
     val a = Array(
       Array(1, 0, 0, 1, 0), // S1
       Array(0, 0, 1, 0, 0), // S2
