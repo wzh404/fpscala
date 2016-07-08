@@ -10,7 +10,7 @@ import com.typesafe.config.ConfigFactory
  */
 object RemoteApplicaion {
   def main(args: Array[String]): Unit = {
-    val configFile = getClass.getClassLoader.getResource("application.conf").getFile
+    val configFile = getClass.getClassLoader.getResource("remote.conf").getFile
 
     //parse the config
     val config = ConfigFactory.parseFile(new File(configFile))

@@ -21,7 +21,7 @@ abstract class ClusterRoledWorker extends Actor with ActorLogging{
   override def postStop(): Unit = cluster.unsubscribe(self)
 
   /**
-    * ÏÂÓÎ×ÓÏµÍ³½Úµã·¢ËÍ×¢²áÏûÏ¢
+    * ä¸‹æ¸¸å­ç³»ç»ŸèŠ‚ç‚¹å‘é€æ³¨å†Œæ¶ˆæ¯
     */
   def register(member: Member, createPath: (Member) => ActorPath): Unit = {
     val actorPath = createPath(member)
